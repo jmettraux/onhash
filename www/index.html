@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>onhash</title>
+  </head>
+  <body>
+    <h1>onhash</h1>
+    <p>Lore ipsum...</p>
+    <script>
+
+window.history.pushState({}, 'title', '#0');
+
+var ohc = function(ev) {
+  window.history.pushState({}, 'title', '#0');
+  //window.history.pushState({}, 'title', '#' + (new Date().getTime()));
+};
+window.onhashchange = ohc;
+    </script>
+  </body>
+</html>
+
